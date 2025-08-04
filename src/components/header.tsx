@@ -19,6 +19,7 @@ export function Header() {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };

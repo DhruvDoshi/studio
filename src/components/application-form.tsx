@@ -30,6 +30,7 @@ export function ApplicationForm() {
   const { toast } = useToast();
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     if (state.message) {
       if(Object.keys(state.errors).length > 0 || state.message.includes("error")) {
         toast({

@@ -175,6 +175,7 @@ function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
 
   React.useEffect(() => {
+    if (typeof window === 'undefined') return;
     listeners.push(setState)
     return () => {
       const index = listeners.indexOf(setState)
