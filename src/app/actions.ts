@@ -43,8 +43,9 @@ export async function submitApplication(prevState: any, formData: FormData) {
     return { message: "Application submitted successfully!", errors: {} };
   } catch (e) {
     console.error("Error adding document: ", e);
+    const errorMessage = e instanceof Error ? e.message : "An unknown database error occurred.";
     return {
-      message: "An error occurred while submitting the application. Please try again.",
+      message: `An error occurred while submitting the application: ${errorMessage}`,
       errors: {},
     };
   }
