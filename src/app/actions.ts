@@ -1,8 +1,7 @@
 "use server";
 
 import { z } from "zod";
-import { db } from "@/lib/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import clientPromise from "@/lib/mongodb";
 
 const applicationSchema = z.object({
   product: z.string().min(10, { message: "Please provide a detailed description." }),
@@ -34,11 +33,13 @@ export async function submitApplication(prevState: any, formData: FormData) {
   }
 
   try {
-    const docRef = await addDoc(collection(db, "applications"), {
+    const client = await clientPromise;
+    const db = client.db("venture-bridge"); // You can change your database name here
+    const collection = db.collection("applications");
+    await collection.insertOne({
       ...validatedFields.data,
       submittedAt: new Date(),
     });
-    console.log("Document written with ID: ", docRef.id);
     return { message: "Application submitted successfully!", errors: {} };
   } catch (e) {
     console.error("Error adding document: ", e);
