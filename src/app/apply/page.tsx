@@ -1,8 +1,8 @@
 import { ApplicationForm } from "@/components/application-form";
 
-export function Application() {
+export default function ApplyPage() {
   return (
-    <section id="apply" className="py-20 md:py-28 bg-primary/5">
+    <section id="apply" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

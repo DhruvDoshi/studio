@@ -20,7 +20,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-      {pending ? "Submitting..." : "Start Application"}
+      {pending ? "Submitting..." : "Submit Application"}
     </Button>
   );
 }
@@ -57,7 +57,7 @@ export function ApplicationForm() {
   ];
 
   return (
-    <Card className="bg-background">
+    <Card className="bg-card border-border shadow-lg">
       <CardHeader>
         <CardTitle className="font-headline text-2xl">Application Form</CardTitle>
         <CardDescription>
@@ -70,9 +70,9 @@ export function ApplicationForm() {
             <div key={field.id} className="space-y-2">
               <Label htmlFor={field.id}>{field.label}</Label>
               {field.type === "textarea" ? (
-                <Textarea id={field.id} name={field.id} placeholder="Your detailed answer..." rows={4} />
+                <Textarea id={field.id} name={field.id} placeholder="Your detailed answer..." rows={4} className="bg-background" />
               ) : (
-                <Input id={field.id} name={field.id} type={field.type} placeholder={`Your ${field.label.toLowerCase()}...`} />
+                <Input id={field.id} name={field.id} type={field.type} placeholder={`Your ${field.label.toLowerCase()}...`} className="bg-background" />
               )}
               {state.errors?.[field.id] && (
                   <p className="text-sm text-destructive">{state.errors[field.id][0]}</p>

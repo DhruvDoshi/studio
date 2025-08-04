@@ -7,11 +7,11 @@ import { Menu, Mountain } from "lucide-react";
 import * as React from "react";
 
 const navLinks = [
-  { href: "#about", label: "About Us" },
-  { href: "#programs", label: "Programs" },
-  { href: "#apply", label: "Apply Now" },
-  { href: "#faq", label: "FAQs" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About Us" },
+  { href: "/#programs", label: "Programs" },
+  { href: "/apply", label: "Apply Now" },
+  { href: "/#faq", label: "FAQs" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -52,7 +52,7 @@ export function Header() {
         </nav>
         <div className="hidden md:block">
           <Button asChild>
-            <Link href="#apply">Apply Now</Link>
+            <Link href="/apply">Apply Now</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -82,7 +82,7 @@ export function Header() {
                   ))}
                 </nav>
                 <Button asChild>
-                  <Link href="#apply" onClick={() => setOpen(false)}>Apply Now</Link>
+                  <Link href="/apply" onClick={() => setOpen(false)}>Apply Now</Link>
                 </Button>
               </div>
             </SheetContent>

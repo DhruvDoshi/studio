@@ -25,7 +25,7 @@ export function WhoWeWorkWith() {
             </p>
           </div>
           <div>
-            <Card className="bg-secondary/50">
+            <Card className="bg-card border-destructive/20 shadow-lg">
               <CardHeader>
                  <CardTitle className="font-headline text-xl">We're not the right fit if you're:</CardTitle>
               </CardHeader>

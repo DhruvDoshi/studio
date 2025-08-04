@@ -32,7 +32,7 @@ export function About() {
             </p>
           </div>
           <div className="space-y-6">
-            <Card className="bg-primary/5">
+            <Card className="bg-card border-border shadow-lg">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Why NBV?</CardTitle>
               </CardHeader>
