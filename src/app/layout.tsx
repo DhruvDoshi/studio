@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Venture Bridge',
+  title: 'NextBridge Ventures',
   description:
     'Next Bridge Ventures (NBV) is a Canadian startup incubator for globally-minded founders.',
 };

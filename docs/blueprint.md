@@ -1,4 +1,4 @@
-# **App Name**: Venture Bridge
+# **App Name**: NextBridge Ventures
 
 ## Core Features:
 

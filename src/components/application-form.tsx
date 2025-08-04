@@ -11,7 +11,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-const initialState = {
+
+type ApplicationFormState = {
+  message: string;
+  errors: Record<string, string[]>;
+};
+
+const initialState: ApplicationFormState = {
   message: "",
   errors: {},
 };
@@ -25,8 +31,9 @@ function SubmitButton() {
   );
 }
 
+
 export function ApplicationForm() {
-  const [state, formAction] = useActionState(submitApplication, initialState);
+  const [state, formAction] = useActionState<ApplicationFormState, FormData>(submitApplication, initialState);
   const { toast } = useToast();
 
   useEffect(() => {

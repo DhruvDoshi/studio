@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg">
               <Mountain className="h-6 w-6 text-primary" />
-              <span className="font-headline text-xl">Venture Bridge</span>
+              <span className="font-headline text-xl">NextBridge Ventures</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
               Next Bridge Ventures (NBV) is a private Canadian venture incubation platform.
@@ -31,7 +31,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Venture Bridge. All rights reserved.
+          © {new Date().getFullYear()} NextBridge Ventures. All rights reserved.
         </div>
       </div>
     </footer>
