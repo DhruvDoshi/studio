@@ -2,7 +2,7 @@ import { ApplicationForm } from "@/components/application-form";
 
 export default function ApplyPage() {
   return (
-    <section id="apply" className="py-20 md:py-28 bg-white">
+    <section id="apply" className="py-20 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
@@ -13,7 +13,9 @@ export default function ApplyPage() {
           </p>
         </div>
         <div className="max-w-3xl mx-auto">
-          <ApplicationForm />
+          <div className="bg-white rounded-xl shadow-xl border border-brand-teal/20 p-8">
+            <ApplicationForm />
+          </div>
         </div>
       </div>
     </section>

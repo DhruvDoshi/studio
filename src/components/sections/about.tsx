@@ -12,27 +12,27 @@ const whyNbvPoints = [
 
 export function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
+    <section id="about" className="py-20 md:py-28 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="font-headline text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
               Who We Are
             </h2>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-gray-700">
               NBV is a venture-building platform headquartered in Canada, supporting innovative founders through incubation, mentorship, and business validation. Our role is to bridge serious entrepreneurs with Canadian economic opportunities — with a firm focus on execution, not immigration promises.
             </p>
             <h3 className="font-headline text-2xl font-bold pt-4 text-brand-teal">Our Mission</h3>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-gray-700">
               To empower globally ambitious entrepreneurs with the tools, insights, and strategic support needed to launch viable ventures in Canada — and beyond.
             </p>
             <h3 className="font-headline text-2xl font-bold pt-4 text-brand-teal">Our Approach</h3>
-            <p className="text-lg text-white/90">
+            <p className="text-lg text-gray-700">
               We don't offer pathways. We offer performance. NBV aligns with Canadian policy by focusing on real-world traction, not loophole-based entry.
             </p>
           </div>
           <div className="space-y-6">
-            <Card className="bg-white/10 backdrop-blur-sm border-brand-teal/30 shadow-lg">
+            <Card className="bg-white border-brand-teal/30 shadow-lg">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl text-brand-teal">Why NBV?</CardTitle>
               </CardHeader>
@@ -40,14 +40,14 @@ export function About() {
                 {whyNbvPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
-                    <p className="text-white/90">{point}</p>
+                    <p className="text-gray-700">{point}</p>
                   </div>
                 ))}
                 <div className="flex flex-wrap gap-4 pt-4">
                     <Button variant="outline" asChild className="border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white">
                         <Link href="#">Meet Our Team <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
-                    <Button variant="outline" asChild className="border-white text-white hover:bg-white hover:text-brand-navy">
+                    <Button variant="outline" asChild className="border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white">
                         <Link href="#">Learn About Our Network <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                 </div>

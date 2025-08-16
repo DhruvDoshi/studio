@@ -70,7 +70,7 @@ export function Programs() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program) => (
-            <Card key={program.title} className="flex flex-col bg-white border-brand-teal/20 shadow-lg hover:shadow-brand-teal/20 transition-shadow duration-300">
+            <Card key={program.title} className="flex flex-col bg-white border-brand-teal/20 shadow-xl hover:shadow-2xl hover:shadow-brand-teal/10 transition-all duration-300 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="font-headline text-xl text-brand-navy">{program.title}</CardTitle>
                 <CardDescription className="text-gray-600">{program.description}</CardDescription>
@@ -86,7 +86,7 @@ export function Programs() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white">
+                <Button asChild variant="outline" className="w-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white transition-all duration-200">
                   <Link href={program.cta.href}>
                     {program.cta.text} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

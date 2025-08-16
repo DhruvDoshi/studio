@@ -9,13 +9,15 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.svg"
-                alt="NextBridge Ventures"
-                width={80}
-                height={32}
-                className="h-8 w-auto"
-              />
+              <div className="bg-white rounded-lg p-2">
+                <Image
+                  src="/logo.svg"
+                  alt="NextBridge Ventures"
+                  width={80}
+                  height={32}
+                  className="h-8 w-auto"
+                />
+              </div>
             </Link>
             <p className="text-sm text-white/80 max-w-sm">
               Next Bridge Ventures (NBV) is a private Canadian venture

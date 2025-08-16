@@ -65,36 +65,50 @@ export function ApplicationForm() {
   ];
 
   return (
-    <Card className="bg-white border-brand-teal/20 shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline text-2xl text-brand-navy">Application Form</CardTitle>
-        <CardDescription className="text-gray-600">
+    <div className="space-y-6">
+      <div className="bg-brand-navy rounded-lg p-6 text-center">
+        <h3 className="font-headline text-xl text-white mb-2">Application Form</h3>
+        <p className="text-white/80">
           This application is designed to understand your business vision.
-        </CardDescription>
-      </CardHeader>
-      <form action={formAction}>
-        <CardContent className="space-y-6">
-          {fields.map(field => (
-            <div key={field.id} className="space-y-2">
-              <Label htmlFor={field.id}>{field.label}</Label>
-              {field.type === "textarea" ? (
-                <Textarea id={field.id} name={field.id} placeholder="Your detailed answer..." rows={4} className="bg-background" />
-              ) : (
-                <Input id={field.id} name={field.id} type={field.type} placeholder={`Your ${field.label.toLowerCase()}...`} className="bg-background" />
-              )}
-              {state.errors?.[field.id] && (
-                  <p className="text-sm text-destructive">{state.errors[field.id][0]}</p>
-              )}
-            </div>
-          ))}
-        </CardContent>
-        <CardFooter className="flex flex-col gap-4">
+        </p>
+      </div>
+      
+      <form action={formAction} className="space-y-6">
+        {fields.map(field => (
+          <div key={field.id} className="space-y-2">
+            <Label htmlFor={field.id} className="text-brand-navy font-medium">{field.label}</Label>
+            {field.type === "textarea" ? (
+              <Textarea 
+                id={field.id} 
+                name={field.id} 
+                placeholder="Your detailed answer..." 
+                rows={4} 
+                className="bg-white border-brand-teal/20 focus:border-brand-teal focus:ring-brand-teal/20" 
+              />
+            ) : (
+              <Input 
+                id={field.id} 
+                name={field.id} 
+                type={field.type} 
+                placeholder={`Your ${field.label.toLowerCase()}...`} 
+                className="bg-white border-brand-teal/20 focus:border-brand-teal focus:ring-brand-teal/20" 
+              />
+            )}
+            {state.errors?.[field.id] && (
+                <p className="text-sm text-red-600">{state.errors[field.id][0]}</p>
+            )}
+          </div>
+        ))}
+        
+        <div className="pt-4 space-y-4">
           <SubmitButton />
-           <p className="text-xs text-muted-foreground text-center">
-            <strong>Important Notice:</strong> NBV is not an immigration consultancy and does not provide immigration advice. All permit or PR decisions are made independently by the IRCC.
-          </p>
-        </CardFooter>
+          <div className="bg-brand-teal/10 rounded-lg p-4">
+            <p className="text-xs text-brand-navy text-center">
+              <strong>Important Notice:</strong> NBV is not an immigration consultancy and does not provide immigration advice. All permit or PR decisions are made independently by the IRCC.
+            </p>
+          </div>
+        </div>
       </form>
-    </Card>
+    </div>
   );
 }

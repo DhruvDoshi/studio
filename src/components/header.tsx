@@ -32,54 +32,62 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md border-b border-brand-teal/20"
+          : "bg-white/10 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.svg"
-            alt="NextBridge Ventures"
-            width={120}
-            height={48}
-            className="h-12 w-auto"
-          />
+          <div className="bg-white rounded-lg p-2 shadow-sm">
+            <Image
+              src="/logo.svg"
+              alt="NextBridge Ventures"
+              width={120}
+              height={48}
+              className="h-12 w-auto"
+            />
+          </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/90 hover:text-brand-teal transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                isScrolled 
+                  ? "text-brand-navy hover:text-brand-teal" 
+                  : "text-white hover:text-brand-teal drop-shadow-sm"
+              }`}
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="hidden md:block">
-          <Button asChild>
+          <Button asChild className="bg-brand-teal hover:bg-brand-teal/90 text-white shadow-lg">
             <Link href="/apply">Apply Now</Link>
           </Button>
         </div>
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className={isScrolled ? "text-brand-navy" : "text-white"}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-white">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center">
-                  <Image
-                    src="/logo.svg"
-                    alt="NextBridge Ventures"
-                    width={100}
-                    height={40}
-                    className="h-10 w-auto"
-                  />
+                  <div className="bg-gray-50 rounded-lg p-2">
+                    <Image
+                      src="/logo.svg"
+                      alt="NextBridge Ventures"
+                      width={100}
+                      height={40}
+                      className="h-10 w-auto"
+                    />
+                  </div>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
@@ -87,13 +95,13 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-lg font-medium hover:text-brand-teal transition-colors text-gray-800"
+                      className="text-lg font-medium hover:text-brand-teal transition-colors text-brand-navy"
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
-                <Button asChild>
+                <Button asChild className="bg-brand-teal hover:bg-brand-teal/90 text-white">
                   <Link href="/apply" onClick={() => setOpen(false)}>
                     Apply Now
                   </Link>
