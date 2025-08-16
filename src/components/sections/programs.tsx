@@ -58,10 +58,10 @@ const programs = [
 
 export function Programs() {
   return (
-    <section id="programs" className="py-20 md:py-28 bg-secondary">
+    <section id="programs" className="py-20 md:py-28 bg-brand-navy/5">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
             What We Do
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
@@ -70,23 +70,23 @@ export function Programs() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program) => (
-            <Card key={program.title} className="flex flex-col bg-card border-border shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
+            <Card key={program.title} className="flex flex-col bg-card border-brand-teal/20 shadow-lg hover:shadow-brand-teal/20 transition-shadow duration-300">
               <CardHeader>
-                <CardTitle className="font-headline text-xl">{program.title}</CardTitle>
+                <CardTitle className="font-headline text-xl text-brand-navy">{program.title}</CardTitle>
                 <CardDescription>{program.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-3">
                   {program.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
                       <span className="text-sm text-foreground/90">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className="w-full border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white">
                   <Link href={program.cta.href}>
                     {program.cta.text} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 import * as React from "react";
 
 const navLinks = [
@@ -37,7 +38,13 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Mountain className="h-6 w-6 text-primary" />
+          <Image 
+            src="/logo.png" 
+            alt="NextBridge Ventures" 
+            width={32} 
+            height={32} 
+            className="h-8 w-8"
+          />
           <span className="font-headline text-xl">NextBridge Ventures</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -67,7 +74,13 @@ export function Header() {
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-                  <Mountain className="h-6 w-6 text-primary" />
+                  <Image 
+                    src="/logo.png" 
+                    alt="NextBridge Ventures" 
+                    width={32} 
+                    height={32} 
+                    className="h-8 w-8"
+                  />
                   <span className="font-headline">NextBridge Ventures</span>
                 </Link>
                 <nav className="flex flex-col gap-4">

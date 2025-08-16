@@ -25,7 +25,7 @@ const initialState: ApplicationFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+    <Button type="submit" disabled={pending} className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white">
       {pending ? "Submitting..." : "Submit Application"}
     </Button>
   );
@@ -65,9 +65,9 @@ export function ApplicationForm() {
   ];
 
   return (
-    <Card className="bg-card border-border shadow-lg">
+    <Card className="bg-card border-brand-teal/20 shadow-lg">
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">Application Form</CardTitle>
+        <CardTitle className="font-headline text-2xl text-brand-navy">Application Form</CardTitle>
         <CardDescription>
           This application is designed to understand your business vision.
         </CardDescription>

@@ -61,6 +61,11 @@ export default {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Brand colors
+        brand: {
+          teal: '#00b2b2',
+          navy: '#0f253e',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

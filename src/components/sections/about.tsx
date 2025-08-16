@@ -32,22 +32,22 @@ export function About() {
             </p>
           </div>
           <div className="space-y-6">
-            <Card className="bg-card border-border shadow-lg">
+            <Card className="bg-card border-brand-teal/20 shadow-lg">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Why NBV?</CardTitle>
+                <CardTitle className="font-headline text-2xl text-brand-navy">Why NBV?</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {whyNbvPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
                     <p className="text-foreground/90">{point}</p>
                   </div>
                 ))}
                 <div className="flex flex-wrap gap-4 pt-4">
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild className="border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white">
                         <Link href="#">Meet Our Team <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild className="border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white">
                         <Link href="#">Learn About Our Network <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
                 </div>
