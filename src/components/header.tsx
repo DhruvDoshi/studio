@@ -20,7 +20,7 @@ export function Header() {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -37,22 +37,21 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Image 
-            src="/logo.png" 
-            alt="NextBridge Ventures" 
-            width={32} 
-            height={32} 
-            className="h-8 w-8"
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.svg"
+            alt="NextBridge Ventures"
+            width={120}
+            height={48}
+            className="h-12 w-auto"
           />
-          <span className="font-headline text-xl">NextBridge Ventures</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-white/90 hover:text-brand-teal transition-colors"
             >
               {link.label}
             </Link>
@@ -73,15 +72,14 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col gap-6 p-6">
-                <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-                  <Image 
-                    src="/logo.png" 
-                    alt="NextBridge Ventures" 
-                    width={32} 
-                    height={32} 
-                    className="h-8 w-8"
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/logo.svg"
+                    alt="NextBridge Ventures"
+                    width={100}
+                    height={40}
+                    className="h-10 w-auto"
                   />
-                  <span className="font-headline">NextBridge Ventures</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
@@ -89,14 +87,16 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-lg font-medium hover:text-primary transition-colors"
+                      className="text-lg font-medium hover:text-brand-teal transition-colors text-gray-800"
                     >
                       {link.label}
                     </Link>
                   ))}
                 </nav>
                 <Button asChild>
-                  <Link href="/apply" onClick={() => setOpen(false)}>Apply Now</Link>
+                  <Link href="/apply" onClick={() => setOpen(false)}>
+                    Apply Now
+                  </Link>
                 </Button>
               </div>
             </SheetContent>

@@ -58,29 +58,29 @@ const programs = [
 
 export function Programs() {
   return (
-    <section id="programs" className="py-20 md:py-28 bg-brand-navy/5">
+    <section id="programs" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
             What We Do
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-4 text-lg text-gray-700">
             We provide a suite of services designed to build real, sustainable businesses in Canada. Our focus is on strategic support that creates value and aligns with national economic goals.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program) => (
-            <Card key={program.title} className="flex flex-col bg-card border-brand-teal/20 shadow-lg hover:shadow-brand-teal/20 transition-shadow duration-300">
+            <Card key={program.title} className="flex flex-col bg-white border-brand-teal/20 shadow-lg hover:shadow-brand-teal/20 transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="font-headline text-xl text-brand-navy">{program.title}</CardTitle>
-                <CardDescription>{program.description}</CardDescription>
+                <CardDescription className="text-gray-600">{program.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <ul className="space-y-3">
                   {program.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-brand-teal mt-1 flex-shrink-0" />
-                      <span className="text-sm text-foreground/90">{feature}</span>
+                      <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>

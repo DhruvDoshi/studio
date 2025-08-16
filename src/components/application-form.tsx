@@ -65,10 +65,10 @@ export function ApplicationForm() {
   ];
 
   return (
-    <Card className="bg-card border-brand-teal/20 shadow-lg">
+    <Card className="bg-white border-brand-teal/20 shadow-lg">
       <CardHeader>
         <CardTitle className="font-headline text-2xl text-brand-navy">Application Form</CardTitle>
-        <CardDescription>
+        <CardDescription className="text-gray-600">
           This application is designed to understand your business vision.
         </CardDescription>
       </CardHeader>

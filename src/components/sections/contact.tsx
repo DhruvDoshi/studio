@@ -17,13 +17,13 @@ const contactDetails = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-brand-navy/5">
+    <section id="contact" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
             Let's Talk Business
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">
+          <p className="mt-4 text-lg text-gray-700">
             Interested in building your venture in Canada with integrity and real traction? Reach out to start the conversation.
           </p>
         </div>
@@ -31,7 +31,7 @@ export function Contact() {
           {contactDetails.map((detail, index) => (
             <div key={index} className="flex items-center justify-center gap-4">
               <detail.icon className="h-6 w-6 text-brand-teal" />
-              <Link href={detail.href} className="text-lg hover:underline hover:text-brand-teal transition-colors">
+              <Link href={detail.href} className="text-lg hover:underline hover:text-brand-teal transition-colors text-gray-700">
                 {detail.text}
               </Link>
             </div>
